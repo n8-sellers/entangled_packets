@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "A minimalist educational website about quantum computing and quantum networking concepts for network engineers." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title} | Entangled Packets</title>
+  </head>
+  <body class="bg-neutral-50 text-neutral-900 min-h-screen flex flex-col">
+    <header class="border-b border-neutral-200 py-4">
+      <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+        <a href="/" class="text-xl font-medium text-primary-800">Entangled Packets</a>
+        <nav class="hidden md:flex space-x-6">
+          <a href="/" class="text-neutral-700 hover:text-primary-600 transition-colors">Home</a>
+          <a href="/articles" class="text-neutral-700 hover:text-primary-600 transition-colors">Articles</a>
+          <a href="/about" class="text-neutral-700 hover:text-primary-600 transition-colors">About</a>
+        </nav>
+        <button class="md:hidden" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    
+    <main class="flex-grow container mx-auto px-4 md:px-6 py-8">
+      <slot />
+    </main>
+    
+    <footer class="border-t border-neutral-200 py-6 mt-12">
+      <div class="container mx-auto px-4 md:px-6 text-center text-neutral-500 text-sm">
+        <p>&copy; {new Date().getFullYear()} Entangled Packets. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

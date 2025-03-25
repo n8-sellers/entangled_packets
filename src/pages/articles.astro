@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Articles">
+  <div class="max-w-4xl mx-auto">
+    <header class="mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-primary-800 mb-4">Quantum Computing Articles</h1>
+      <p class="text-lg text-neutral-700">
+        Explore our collection of articles focused on quantum computing and networking concepts for network engineers.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <!-- These will be dynamically generated from content collection when we have articles -->
+      <article class="bg-white border border-neutral-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow p-6">
+        <h2 class="text-2xl font-medium text-primary-800 mb-2">
+          <a href="#" class="hover:text-primary-600 transition-colors">Quantum Bits (Qubits) and Superposition</a>
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          Understanding the fundamental unit of quantum information and how it differs from classical bits. 
+          Learn how qubits can exist in multiple states simultaneously through superposition.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-neutral-500">Posted on: March 25, 2025</span>
+          <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">Read Article →</a>
+        </div>
+      </article>
+
+      <article class="bg-white border border-neutral-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow p-6">
+        <h2 class="text-2xl font-medium text-primary-800 mb-2">
+          <a href="#" class="hover:text-primary-600 transition-colors">Quantum Entanglement Explained</a>
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          Exploring the phenomenon of entanglement and its implications for quantum networking. 
+          Discover how entangled particles maintain instantaneous correlations regardless of distance.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-neutral-500">Posted on: March 25, 2025</span>
+          <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">Read Article →</a>
+        </div>
+      </article>
+
+      <article class="bg-white border border-neutral-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow p-6">
+        <h2 class="text-2xl font-medium text-primary-800 mb-2">
+          <a href="#" class="hover:text-primary-600 transition-colors">Quantum vs. Classical Networking Protocols</a>
+        </h2>
+        <p class="text-neutral-600 mb-4">
+          Comparing traditional networking protocols with emerging quantum networking approaches.
+          Learn how quantum principles transform fundamental networking concepts.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-neutral-500">Posted on: March 25, 2025</span>
+          <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">Read Article →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</BaseLayout>
